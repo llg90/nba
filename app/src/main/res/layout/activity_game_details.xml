@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cha">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:tint="@color/back_button_tint"
+        android:contentDescription="@string/empty"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:src="@mipmap/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/home_icon_view"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/atl"
+        android:transitionName="homeIconView"
+        app:layout_constraintEnd_toStartOf="@id/guide_line"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_button" />
+
+    <TextView
+        android:id="@+id/home_team_city_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atlanta"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:transitionName="homeTeamCityView"
+        app:layout_constraintEnd_toEndOf="@id/home_icon_view"
+        app:layout_constraintStart_toStartOf="@id/home_icon_view"
+        app:layout_constraintTop_toBottomOf="@id/home_icon_view" />
+
+    <TextView
+        android:id="@+id/home_team_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hawks"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:transitionName="homeTeamNameView"
+        app:layout_constraintEnd_toEndOf="@id/home_team_city_view"
+        app:layout_constraintStart_toStartOf="@id/home_team_city_view"
+        app:layout_constraintTop_toBottomOf="@id/home_team_city_view" />
+
+    <TextView
+        android:id="@+id/home_defeat_ratio_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0-0"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/home_team_name_view"
+        app:layout_constraintStart_toStartOf="@id/home_team_name_view"
+        app:layout_constraintTop_toBottomOf="@id/home_team_name_view" />
+
+    <TextView
+        android:id="@+id/game_state_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/final_text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:transitionName="gameStateView"
+        app:layout_constraintBottom_toBottomOf="@id/home_icon_view"
+        app:layout_constraintEnd_toStartOf="@id/visitor_icon_view"
+        app:layout_constraintStart_toEndOf="@id/home_icon_view"
+        app:layout_constraintTop_toTopOf="@id/home_icon_view" />
+
+    <LinearLayout
+        android:id="@+id/home_score_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/guide_line"
+        app:layout_constraintTop_toBottomOf="@id/game_state_view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/home_score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:transitionName="homeScoreView"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/home_score_layout"
+        app:layout_constraintEnd_toStartOf="@id/visitor_score_layout"
+        app:layout_constraintStart_toEndOf="@id/home_score_layout"
+        app:layout_constraintTop_toTopOf="@id/home_score_layout" />
+
+    <LinearLayout
+        android:id="@+id/visitor_score_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/guide_line"
+        app:layout_constraintTop_toBottomOf="@id/game_state_view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Away"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/visitor_score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="99"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:transitionName="visitorScoreView"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/visitor_icon_view"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/tor"
+        android:transitionName="visitorIconView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@id/guide_line"
+        app:layout_constraintTop_toBottomOf="@id/back_button" />
+
+    <TextView
+        android:id="@+id/visitor_team_city_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atlanta"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:transitionName="visitorTeamCityView"
+        app:layout_constraintEnd_toEndOf="@id/visitor_icon_view"
+        app:layout_constraintStart_toStartOf="@id/visitor_icon_view"
+        app:layout_constraintTop_toBottomOf="@id/visitor_icon_view" />
+
+    <TextView
+        android:id="@+id/visitor_team_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hawks"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:transitionName="visitorTeamNameView"
+        app:layout_constraintEnd_toEndOf="@id/visitor_team_city_view"
+        app:layout_constraintStart_toStartOf="@id/visitor_team_city_view"
+        app:layout_constraintTop_toBottomOf="@id/visitor_team_city_view" />
+
+    <TextView
+        android:id="@+id/visitor_defeat_ratio_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0-0"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/visitor_team_name_view"
+        app:layout_constraintStart_toStartOf="@id/visitor_team_name_view"
+        app:layout_constraintTop_toBottomOf="@id/visitor_team_name_view" />
+
+   <View
+       android:id="@+id/head_line"
+       android:layout_width="0dp"
+       android:layout_height="20dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/visitor_defeat_ratio_view"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/game_details_tab_text_color"
+        app:tabSelectedTextColor="@color/game_details_tab_text_selected_color"
+        app:tabTextAppearance="@style/GameDetailsTabLayoutTextStyle"
+        app:tabPadding="0dp"
+        app:tabBackground="@drawable/game_details_tab_background"
+        app:layout_constraintTop_toBottomOf="@id/head_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.example.liligang.nba.widget.NoScrollHorizontalScrollView
+        android:id="@+id/no_scroll_horizontal_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toEndOf="@id/member_list_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        android:background="@color/white">
+
+        <include layout="@layout/activity_game_details_table_title"/>
+
+    </com.example.liligang.nba.widget.NoScrollHorizontalScrollView>
+
+    <View
+        android:id="@+id/details_tab_title_line"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:background="@color/game_details_title_line_color"
+        app:layout_constraintTop_toBottomOf="@id/no_scroll_horizontal_scroll_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ListView
+        android:id="@+id/member_list_view"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:divider="@color/game_details_title_line_color"
+        android:dividerHeight="1px"
+        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/member_or_data_line"
+        android:layout_width="1px"
+        android:layout_height="0dp"
+        android:background="@color/game_details_title_line_color"
+        app:layout_constraintStart_toEndOf="@id/member_list_view"
+        app:layout_constraintEnd_toEndOf="@id/member_list_view"
+        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"/>
+
+    <com.example.liligang.nba.widget.LinkedHorizontalScrollView
+        android:id="@+id/linked_horizontal_scroll_view"
+        android:layout_width="600dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/member_or_data_line"
+        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ListView
+            android:id="@+id/member_data_list_view"
+            android:layout_width="600dp"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:divider="@color/game_details_title_line_color"
+            android:dividerHeight="1px"/>
+
+    </com.example.liligang.nba.widget.LinkedHorizontalScrollView>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/av_loading_indicator_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:indicatorName="BallClipRotatePulseIndicator"
+        app:indicatorColor="@color/game_head"
+        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

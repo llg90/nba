@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="home_tab_array">
+        <item>Game</item>
+        <item>Player</item>
+        <item>Team</item>
+    </string-array>
+
+    <string-array name="game_details_table_title">
+        <item> </item>
+        <item>P</item>
+        <item>PTS</item>
+        <item>AST</item>
+        <item>REB</item>
+        <item>FG</item>
+        <item>BLK</item>
+        <item>STL</item>
+        <item>3PT</item>
+        <item>FT</item>
+        <item>TO</item>
+        <item>PF</item>
+        <item>+/-</item>
+    </string-array>
+</resources>

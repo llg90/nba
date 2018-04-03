@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFF</color>
+    
+    <color name="back_button_normal_color">#FFF</color>
+    <color name="back_button_selected_color">#868484</color>
+
+    <color name="game_details_tab_background_color">#DEDEDE</color>
+    <color name="game_details_tab_text_color">#7F7F7F</color>
+    <color name="game_details_tab_text_selected_color">#222</color>
+    <color name="game_details_title_line_color">#7F7F7F</color>
+
+    <color name="tab_text_color">#DCDCDC</color>
+    <color name="selected_text_color">#FFF</color>
+    <color name="player_search_hint_color">#cac5c5</color>
+    <color name="refresh_background_color">#868484</color>
+    
+    <color name="game_head">  #4D98E4</color>
+    <color name="player_head">#E66840</color>
+    <color name="team_head">  #2DB43D</color>
+    <color name="tab_transparent">#4CFFFFFF</color>
+
+    <color name="atl">#E03A3E</color>
+    <color name="bkn">#000</color>
+    <color name="bos">#008348</color>
+    <color name="cha">#008CA8</color>
+    <color name="chi">#CE1141</color>
+    <color name="cle">#860038</color>
+    <color name="dal">#007DC5</color>
+    <color name="den">#FFB20F</color>
+    <color name="det">#006BB6</color>
+    <color name="gsw">#FDB927</color>
+    <color name="hou">#CE1141</color>
+    <color name="ind">#FFC633</color>
+    <color name="lac">#222</color>
+    <color name="lal">#552582</color>
+    <color name="mem">#6189B9</color>
+    <color name="mia">#98002E</color>
+    <color name="mil">#00471B</color>
+    <color name="min">#005083</color>
+    <color name="nop">#002B5C</color>
+    <color name="nyk">#F58426</color>
+    <color name="okc">#F05133</color>
+    <color name="orl">#007DC5</color>
+    <color name="phi">#006BB6</color>
+    <color name="phx">#E56020</color>
+    <color name="por">#000</color>
+    <color name="sac">#724C9F</color>
+    <color name="sas">#B6BFBF</color>
+    <color name="tor">#CE1141</color>
+    <color name="uta">#00471B</color>
+    <color name="was">#F5002F</color>
+
+</resources>
