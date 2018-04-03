@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +20,9 @@ import com.example.liligang.nba.constant.ConstantValue;
 import com.example.liligang.nba.constant.Team;
 import com.example.liligang.nba.net.NetObserver;
 import com.example.liligang.nba.net.SingletonNetServer;
+import com.example.liligang.nba.utils.Utils;
+import com.example.liligang.nba.widget.LinkedHorizontalScrollView;
+import com.example.liligang.nba.widget.NoScrollHorizontalScrollView;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
@@ -43,6 +47,8 @@ public class GameDetailsActivity extends BaseActivity {
     private TextView  mVisitorScoreView;
 
     private TabLayout mDetailsTabLayout;
+    private NoScrollHorizontalScrollView mNoScrollHorizontalScrollView;
+    private LinkedHorizontalScrollView   mLinkedHorizontalScrollView;
     private ListView  mMemberListView;
     private ListView  mMemberDataListView;
     private AVLoadingIndicatorView mAVLoadingIndicatorView;
@@ -89,6 +95,8 @@ public class GameDetailsActivity extends BaseActivity {
         mMemberDataListView     = findViewById(R.id.member_data_list_view);
         mAVLoadingIndicatorView = findViewById(R.id.av_loading_indicator_view);
 
+        mNoScrollHorizontalScrollView = findViewById(R.id.no_scroll_horizontal_scroll_view);
+        mLinkedHorizontalScrollView   = findViewById(R.id.linked_horizontal_scroll_view);
         mAVLoadingIndicatorView.show();
     }
 
@@ -176,6 +184,7 @@ public class GameDetailsActivity extends BaseActivity {
 
                                         mCurrentMemberDataList.clear();
                                         mCurrentMemberDataList.addAll(mHomeMemberListData);
+                                        Utils.setListFromItemMax(mMemberListView);
                                         mMemberListAdapter.notifyDataSetChanged();
 
                                         mCurrentMemberDataListData.clear();
@@ -189,7 +198,74 @@ public class GameDetailsActivity extends BaseActivity {
         }
     }
 
+
+    private boolean isLeftListEnabled = false;
+    private boolean isRightListEnabled = false;
+
     private void initViewListener() {
+        mLinkedHorizontalScrollView.setLinkScrollChangeListener(new LinkedHorizontalScrollView.LinkScrollChangeListener() {
+            @Override
+            public void onScroll(LinkedHorizontalScrollView view, int l, int t, int oldl, int oldt) {
+                mNoScrollHorizontalScrollView.scrollTo(l, t);
+            }
+        });
+
+        mMemberListView.setOverScrollMode(ListView.OVER_SCROLL_NEVER);//禁止快速滑动
+        mMemberDataListView.setOverScrollMode(ListView.OVER_SCROLL_NEVER);
+
+        /*右List跟随左List联动*/
+        mMemberListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+                switch (scrollState) {
+                    case SCROLL_STATE_TOUCH_SCROLL:
+                        isLeftListEnabled  = true;
+                        isRightListEnabled = false;
+                        break;
+                    case SCROLL_STATE_IDLE:
+                        isRightListEnabled = true;
+                        break;
+                    default:
+                        isLeftListEnabled  = false;
+                        isRightListEnabled = false;
+                }
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                View child = view.getChildAt(0);
+                if (child != null && isLeftListEnabled) {
+                    mMemberDataListView.setSelectionFromTop(firstVisibleItem, child.getTop());
+                }
+            }
+        });
+
+        /*左List跟随右List联动*/
+        mMemberDataListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+                switch (scrollState) {
+                    case SCROLL_STATE_TOUCH_SCROLL:
+                        isLeftListEnabled  = false;
+                        isRightListEnabled = true;
+                        break;
+                    case SCROLL_STATE_IDLE:
+                        isLeftListEnabled = true;
+                        break;
+                    default:
+                        isLeftListEnabled  = false;
+                        isRightListEnabled = false;
+                }
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                View child = view.getChildAt(0);
+                if (child != null && isRightListEnabled) {
+                    mMemberListView.setSelectionFromTop(firstVisibleItem, child.getTop());
+                }
+            }
+        });
 
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override

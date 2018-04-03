@@ -13,7 +13,6 @@ import java.util.List;
 
 public class MemberListAdapter extends BaseMAdapter<String> {
 
-
     public MemberListAdapter(@NonNull List<String> data) {
         super(data);
     }

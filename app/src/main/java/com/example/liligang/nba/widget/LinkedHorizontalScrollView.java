@@ -13,7 +13,7 @@ public class LinkedHorizontalScrollView extends HorizontalScrollView {
         void onScroll(LinkedHorizontalScrollView view, int l, int t, int oldl, int oldt);
     }
 
-    public void LinkScrollChangeListener(LinkScrollChangeListener listener) {
+    public void setLinkScrollChangeListener(LinkScrollChangeListener listener) {
         mListener = listener;
     }
 

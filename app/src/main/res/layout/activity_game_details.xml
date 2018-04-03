@@ -250,6 +250,15 @@
     </com.example.liligang.nba.widget.NoScrollHorizontalScrollView>
 
     <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/no_scroll_horizontal_scroll_view"
+        app:layout_constraintBottom_toTopOf="@id/member_list_view"/>
+
+    <View
         android:id="@+id/details_tab_title_line"
         android:layout_width="0dp"
         android:layout_height="1px"
@@ -270,31 +279,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <View
+<!--    <View
         android:id="@+id/member_or_data_line"
         android:layout_width="1px"
         android:layout_height="0dp"
         android:background="@color/game_details_title_line_color"
         app:layout_constraintStart_toEndOf="@id/member_list_view"
         app:layout_constraintEnd_toEndOf="@id/member_list_view"
-        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"/>
+        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"/>-->
 
     <com.example.liligang.nba.widget.LinkedHorizontalScrollView
         android:id="@+id/linked_horizontal_scroll_view"
-        android:layout_width="600dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@id/member_or_data_line"
+        android:scrollbars="none"
+        app:layout_constraintStart_toEndOf="@id/member_list_view"
         app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <ListView
-            android:id="@+id/member_data_list_view"
-            android:layout_width="600dp"
-            android:layout_height="match_parent"
-            android:scrollbars="none"
-            android:divider="@color/game_details_title_line_color"
-            android:dividerHeight="1px"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/member_data_list_view"
+                android:layout_width="650dp"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:divider="@color/game_details_title_line_color"
+                android:dividerHeight="1px"/>
+
+        </LinearLayout>
 
     </com.example.liligang.nba.widget.LinkedHorizontalScrollView>
 

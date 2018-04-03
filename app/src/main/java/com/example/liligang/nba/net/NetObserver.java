@@ -2,6 +2,7 @@ package com.example.liligang.nba.net;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.liligang.nba.NbaApplication;
@@ -55,6 +56,7 @@ public abstract class NetObserver<T> implements Observer<T> {
         if (context != null) {
             Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show();
         }
+        Log.e("okhttp", e.toString());
         if (mAVLoadingIndicatorView != null) {
             mAVLoadingIndicatorView.hide();
         }

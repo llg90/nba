@@ -17,6 +17,7 @@ import com.example.liligang.nba.bean.game.GameResponseBean;
 import com.example.liligang.nba.bean.game.GameHomeBean;
 import com.example.liligang.nba.bean.game.GameVisitorBean;
 import com.example.liligang.nba.constant.ConstantValue;
+import com.example.liligang.nba.constant.GameState;
 import com.example.liligang.nba.net.NetObserver;
 import com.example.liligang.nba.net.SingletonNetServer;
 import com.example.liligang.nba.view.game.details.GameDetailsActivity;
@@ -58,7 +59,7 @@ public class GameFragment extends BaseLazyLoadFragment {
 
         Calendar currentDataCalendar = Calendar.getInstance();
         mGameHead.setGameHeadDate(currentDataCalendar.getTime()); //显示当前的时间
-        currentDataCalendar.add(Calendar.DATE, -1);//美国时间
+        currentDataCalendar.add(Calendar.DATE, -2);//美国时间
         Date usaDate= currentDataCalendar.getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
         mUsaDateString = sdf.format(usaDate);
@@ -97,6 +98,12 @@ public class GameFragment extends BaseLazyLoadFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 GameBean data = mGameListData.get(position);
+                if (GameState.getFormValue(
+                        Integer.parseInt(data.getGamePeriodTime().getGameStatus()))
+                        .equals(GameState.UNSTART)) {
+                    return;
+                }
+
                 Bundle bundle = new Bundle();
                 bundle.putString(ConstantValue.INTENT_KEY.GAME_DATE, mUsaDateString);
                 bundle.putString(ConstantValue.INTENT_KEY.GAME_ID, data.getId());
