@@ -38,19 +38,26 @@ public enum  Team {
     UTA(1610612762, "Utah",         "Jazz",          R.color.uta, "western", R.mipmap.uta),
     WAS(1610612764, "Washington",   "Wizards",       R.color.was, "eastern", R.mipmap.was);
 
-    public long id;
+    public int id;
     public String city;
     public String team;
     public int color;
     public String conf;
     public int logo;
 
-    private Team(long id, String city, String team, int color, String conf, int logo){
+    Team(int id, String city, String team, int color, String conf, int logo){
         this.id    = id;
         this.city  = city;
         this.team  = team;
         this.color = color;
         this.conf  = conf;
         this.logo  = logo;
+    }
+
+    public static Team getFormId(long id) {
+        for (Team item : Team.values()) {
+            if (item.id == id) return item;
+        }
+        return null;
     }
 }

@@ -13,8 +13,8 @@ import android.widget.ListView;
 import com.example.liligang.nba.R;
 import com.example.liligang.nba.base.BaseLazyLoadFragment;
 import com.example.liligang.nba.bean.game.GameBean;
-import com.example.liligang.nba.bean.game.GameResponseBean;
 import com.example.liligang.nba.bean.game.GameHomeBean;
+import com.example.liligang.nba.bean.game.GameResponseBean;
 import com.example.liligang.nba.bean.game.GameVisitorBean;
 import com.example.liligang.nba.constant.ConstantValue;
 import com.example.liligang.nba.constant.GameState;
@@ -52,14 +52,9 @@ public class GameFragment extends BaseLazyLoadFragment {
 
     @Override
     public void getData() {
-        Activity fatherActivity = getActivity();
-        if (fatherActivity instanceof GameHead) {
-            mGameHead = (GameHead) fatherActivity;
-        }
-
         Calendar currentDataCalendar = Calendar.getInstance();
         mGameHead.setGameHeadDate(currentDataCalendar.getTime()); //显示当前的时间
-        currentDataCalendar.add(Calendar.DATE, -2);//美国时间
+        currentDataCalendar.add(Calendar.DATE, -1);//美国时间
         Date usaDate= currentDataCalendar.getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
         mUsaDateString = sdf.format(usaDate);
@@ -88,6 +83,11 @@ public class GameFragment extends BaseLazyLoadFragment {
 
     @Override
     protected void initView(View convertView) {
+        Activity fatherActivity = getActivity();
+        if (fatherActivity instanceof GameHead) {
+            mGameHead = (GameHead) fatherActivity;
+        }
+
         mAVLoadingIndicatorView = convertView.findViewById(R.id.av_loading_indicator_view);
         mSmartRefreshLayout     = convertView.findViewById(R.id.refreshLayout);
         mGameListView           = convertView.findViewById(R.id.game_list_view);

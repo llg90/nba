@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.sports;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/25.
@@ -24,43 +24,43 @@ public class SeasonMetaBean {
      * league_id : 00
      */
 
-    @SerializedName("calendar_date")
+    @JSONField(name="calendar_date")
     private String mCalendarDate; //日历日期
 
-    @SerializedName("season_year")
+    @JSONField(name="season_year")
     private String mSeasonYear;   //季度
 
-    @SerializedName("stats_season_year")
+    @JSONField(name="stats_season_year")
     private String mStatsSeasonYear; //统计季度年
 
-    @SerializedName("stats_season_id")
+    @JSONField(name="stats_season_id")
     private String mStatsSeasonId; //统计季度id
 
-    @SerializedName("stats_season_stage")
+    @JSONField(name="stats_season_stage")
     private String mStatsSeasonStage; //
 
-    @SerializedName("roster_season_year")
+    @JSONField(name="roster_season_year")
     private String mRosterSeasonYear; //
 
-    @SerializedName("schedule_season_year")
+    @JSONField(name="schedule_season_year")
     private String mScheduleSeasonYear; //
 
-    @SerializedName("standings_season_year")
+    @JSONField(name="standings_season_year")
     private String mStandingsSeasonYear; //
 
-    @SerializedName("season_id")
+    @JSONField(name="season_id")
     private String mSeasonId; //
 
-    @SerializedName("display_year")
+    @JSONField(name="display_year")
     private String mDisplayYear; //
 
-    @SerializedName("display_season")
+    @JSONField(name="display_season")
     private String mDisplaySeason; //
 
-    @SerializedName("season_stage")
+    @JSONField(name="season_stage")
     private String mSeasonStage; //
 
-    @SerializedName("league_id")
+    @JSONField(name="league_id")
     private String mLeagueId; //
 
     public String getCalendarDate() {

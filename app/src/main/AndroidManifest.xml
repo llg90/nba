@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.game.details.GameDetailsActivity"/>
+        <activity android:name=".view.player.details.PlayerDetailsActivity"/>
     </application>
 
 </manifest>

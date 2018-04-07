@@ -3,9 +3,6 @@ package com.example.liligang.nba;
 import android.app.Application;
 import android.content.Context;
 
-import com.orhanobut.logger.AndroidLogAdapter;
-import com.orhanobut.logger.Logger;
-
 /**
  * Created by liligang on 2018/3/24.
  */

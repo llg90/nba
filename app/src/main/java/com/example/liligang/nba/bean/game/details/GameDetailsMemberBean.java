@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game.details;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 public class GameDetailsMemberBean {
 
@@ -15,28 +15,28 @@ public class GameDetailsMemberBean {
      * score : 84
      */
 
-    @SerializedName("id")
+    @JSONField(name="id")
     private String mId;
 
-    @SerializedName("team_key")
+    @JSONField(name="team_key")
     private String mTeamKey;
 
-    @SerializedName("city")
+    @JSONField(name="city")
     private String mCity;
 
-    @SerializedName("abbreviation")
+    @JSONField(name="abbreviation")
     private String mAbbreviation;
 
-    @SerializedName("nickname")
+    @JSONField(name="nickname")
     private String mNickname;
 
-    @SerializedName("team_code")
+    @JSONField(name="team_code")
     private String mTeamCode;
 
-    @SerializedName("score")
+    @JSONField(name="score")
     private String mScore;
 
-    @SerializedName("players")
+    @JSONField(name="players")
     private GameDetailsPlayersBean mPlayers;
 
     public String getId() {

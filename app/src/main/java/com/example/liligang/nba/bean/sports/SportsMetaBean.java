@@ -1,19 +1,19 @@
 package com.example.liligang.nba.bean.sports;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/25.
  */
 
 public class SportsMetaBean {
-    @SerializedName("date_time")
+    @JSONField(name="date_time")
     private String mDateTime;
 
-    @SerializedName("season_meta")
+    @JSONField(name="season_meta")
     private SeasonMetaBean mSeasonMeta;
 
-    @SerializedName("next")
+    @JSONField(name="next")
     private NextBean mNext;
 
     public String getDateTime() {

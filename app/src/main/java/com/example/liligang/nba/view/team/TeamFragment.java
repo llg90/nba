@@ -1,25 +1,37 @@
 package com.example.liligang.nba.view.team;
 
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.liligang.nba.R;
-import com.example.liligang.nba.base.BaseFragment;
+import com.example.liligang.nba.base.BaseLazyLoadFragment;
+import com.example.liligang.nba.bean.team.TeamResponseBean;
+import com.example.liligang.nba.net.NetObserver;
+import com.example.liligang.nba.net.SingletonNetServer;
+
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by liligang on 2018/3/27.
  */
 
-public class TeamFragment extends BaseFragment {
+public class TeamFragment extends BaseLazyLoadFragment {
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.fragment_team, container, false);
-        return contentView;
+    protected void getData() {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_team;
+    }
+
+    @Override
+    protected void initView(View convertView) {
+
     }
 }

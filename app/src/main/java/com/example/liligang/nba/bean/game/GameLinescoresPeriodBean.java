@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/26.
@@ -15,13 +15,13 @@ public class GameLinescoresPeriodBean {
      * score : 28
      */
 
-    @SerializedName("period_value")
+    @JSONField(name="period_value")
     private String mPeriodValue; //节数
 
-    @SerializedName("period_name")
+    @JSONField(name="period_name")
     private String mPeriodName; //节数名称Q1 Q2 Q3 Q4
 
-    @SerializedName("score")
+    @JSONField(name="score")
     private String score; //得分
 
     public String getPeriodValue() {

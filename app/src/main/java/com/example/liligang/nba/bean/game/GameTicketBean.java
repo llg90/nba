@@ -1,13 +1,13 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/25.
  */
 
 public class GameTicketBean {
-    @SerializedName("ticket_link")
+    @JSONField(name="ticket_link")
     private String mTicketLink;
 
     public String getTicketLink() {

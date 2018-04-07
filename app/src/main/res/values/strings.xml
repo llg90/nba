@@ -4,4 +4,8 @@
 
     <string name="final_text">Final</string>
     <string name="player_search_hint">Please enter a person name</string>
+
+    <string name="points_text">Points</string>
+    <string name="asistant_text">Asistant</string>
+    <string name="rebounds_text">Rebounds</string>
 </resources>

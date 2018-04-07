@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game.details;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 public class GameDetailsGameBean {
 
@@ -25,49 +25,49 @@ public class GameDetailsGameBean {
      * attendance : 16841
      */
 
-    @SerializedName("id")
+    @JSONField(name="id")
     private String mId;
 
-    @SerializedName("season_id")
+    @JSONField(name="season_id")
     private String mSeasonId;
 
-    @SerializedName("date")
+    @JSONField(name="date")
     private String mDate;
 
-    @SerializedName("time")
+    @JSONField(name="time")
     private String mTime;
 
-    @SerializedName("arena")
+    @JSONField(name="arena")
     private String mArena;
 
-    @SerializedName("city")
+    @JSONField(name="city")
     private String mCity;
 
-    @SerializedName("state")
+    @JSONField(name="state")
     private String mState;
 
-    @SerializedName("country")
+    @JSONField(name="country")
     private String mCountry;
 
-    @SerializedName("previewAvailable")
+    @JSONField(name="previewAvailable")
     private String mPreviewAvailable;
 
-    @SerializedName("recapAvailable")
+    @JSONField(name="recapAvailable")
     private String mRecapAvailable;
 
-    @SerializedName("notebookAvailable")
+    @JSONField(name="notebookAvailable")
     private String mNotebookAvailable;
 
-    @SerializedName("tnt_ot")
+    @JSONField(name="tnt_ot")
     private String mTntOt;
 
-    @SerializedName("attendance")
+    @JSONField(name="attendance")
     private String mAttendance;
 
-    @SerializedName("visitor")
+    @JSONField(name="visitor")
     private GameDetailsMemberBean mVisitor;
 
-    @SerializedName("home")
+    @JSONField(name="home")
     private GameDetailsMemberBean mHome;
 
     public String getId() {

@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game.details;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 public class GameDetailsPlayerBean {
 
@@ -34,85 +34,85 @@ public class GameDetailsPlayerBean {
      * starting_position : F
      */
 
-    @SerializedName("first_name")
+    @JSONField(name="first_name")
     private String mFirstName;
 
-    @SerializedName("last_name")
+    @JSONField(name="last_name")
     private String mLastName;
 
-    @SerializedName("jersey_number")
+    @JSONField(name="jersey_number")
     private String mJerseyNumber;
 
-    @SerializedName("person_id")
+    @JSONField(name="person_id")
     private String mPersonId;
 
-    @SerializedName("position_short")
+    @JSONField(name="position_short")
     private String mPositionShort;
 
-    @SerializedName("position_full")
+    @JSONField(name="position_full")
     private String mPositionFull;
 
-    @SerializedName("minutes")
+    @JSONField(name="minutes")
     private String mMinutes;
 
-    @SerializedName("seconds")
+    @JSONField(name="seconds")
     private String mSeconds;
 
-    @SerializedName("points")
+    @JSONField(name="points")
     private String mPoints;
 
-    @SerializedName("field_goals_made")
+    @JSONField(name="field_goals_made")
     private String mFieldGoalsMade;
 
-    @SerializedName("field_goals_attempted")
+    @JSONField(name="field_goals_attempted")
     private String mFieldGoalsAttempted;
 
-    @SerializedName("player_code")
+    @JSONField(name="player_code")
     private String mPlayerCode;
 
-    @SerializedName("free_throws_made")
+    @JSONField(name="free_throws_made")
     private String mFreeThrowsMade;
 
-    @SerializedName("free_throws_attempted")
+    @JSONField(name="free_throws_attempted")
     private String mFreeThrowsAttempted;
 
-    @SerializedName("three_pointers_made")
+    @JSONField(name="three_pointers_made")
     private String mThreePointersMade;
 
-    @SerializedName("three_pointers_attempted")
+    @JSONField(name="three_pointers_attempted")
     private String mThreePointersAttempted;
 
-    @SerializedName("rebounds_offensive")
+    @JSONField(name="rebounds_offensive")
     private String mReboundsOffensive;
 
-    @SerializedName("rebounds_defensive")
+    @JSONField(name="rebounds_defensive")
     private String mReboundsDefensive;
 
-    @SerializedName("assists")
+    @JSONField(name="assists")
     private String mAssists;
 
-    @SerializedName("fouls")
+    @JSONField(name="fouls")
     private String mFouls;
 
-    @SerializedName("steals")
+    @JSONField(name="steals")
     private String mSteals;
 
-    @SerializedName("turnovers")
+    @JSONField(name="turnovers")
     private String mTurnovers;
 
-    @SerializedName("team_turnovers")
+    @JSONField(name="team_turnovers")
     private String mTeamTurnovers;
 
-    @SerializedName("blocks")
+    @JSONField(name="blocks")
     private String mBlocks;
 
-    @SerializedName("plus_minus")
+    @JSONField(name="plus_minus")
     private String mPlusMinus;
 
-    @SerializedName("on_court")
+    @JSONField(name="on_court")
     private String mOnCourt;
 
-    @SerializedName("starting_position")
+    @JSONField(name="starting_position")
     private String mStartingPosition;
 
     public String getFirstName() {

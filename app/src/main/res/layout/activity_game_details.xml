@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/cha">
+    android:layout_height="match_parent">
 
     <ImageButton
         android:id="@+id/back_button"
@@ -35,7 +34,6 @@
         android:layout_height="65dp"
         android:contentDescription="@string/empty"
         android:scaleType="centerCrop"
-        android:src="@mipmap/atl"
         android:transitionName="homeIconView"
         app:layout_constraintEnd_toStartOf="@id/guide_line"
         app:layout_constraintHorizontal_bias="0.2"
@@ -46,7 +44,6 @@
         android:id="@+id/home_team_city_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atlanta"
         android:textColor="@color/white"
         android:textSize="12sp"
         android:transitionName="homeTeamCityView"
@@ -58,7 +55,6 @@
         android:id="@+id/home_team_name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hawks"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -71,7 +67,6 @@
         android:id="@+id/home_defeat_ratio_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0-0"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -83,9 +78,9 @@
         android:id="@+id/game_state_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/final_text"
         android:textColor="@color/white"
         android:textSize="16sp"
+        android:text="@string/final_text"
         android:transitionName="gameStateView"
         app:layout_constraintBottom_toBottomOf="@id/home_icon_view"
         app:layout_constraintEnd_toStartOf="@id/visitor_icon_view"
@@ -115,7 +110,6 @@
             android:id="@+id/home_score_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100"
             android:textColor="@color/white"
             android:textSize="35sp"
             android:transitionName="homeScoreView"/>
@@ -154,7 +148,6 @@
             android:id="@+id/visitor_score_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="99"
             android:textColor="@color/white"
             android:textSize="35sp"
             android:transitionName="visitorScoreView"/>
@@ -167,7 +160,6 @@
         android:layout_height="65dp"
         android:contentDescription="@string/empty"
         android:scaleType="centerCrop"
-        android:src="@mipmap/tor"
         android:transitionName="visitorIconView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
@@ -178,7 +170,6 @@
         android:id="@+id/visitor_team_city_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atlanta"
         android:textColor="@color/white"
         android:textSize="12sp"
         android:transitionName="visitorTeamCityView"
@@ -190,7 +181,6 @@
         android:id="@+id/visitor_team_name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hawks"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -203,7 +193,6 @@
         android:id="@+id/visitor_defeat_ratio_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0-0"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -279,14 +268,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-<!--    <View
+    <View
         android:id="@+id/member_or_data_line"
         android:layout_width="1px"
         android:layout_height="0dp"
         android:background="@color/game_details_title_line_color"
         app:layout_constraintStart_toEndOf="@id/member_list_view"
         app:layout_constraintEnd_toEndOf="@id/member_list_view"
-        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"/>-->
+        app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.example.liligang.nba.widget.LinkedHorizontalScrollView
         android:id="@+id/linked_horizontal_scroll_view"
@@ -294,7 +284,7 @@
         android:layout_height="0dp"
         android:background="@color/white"
         android:scrollbars="none"
-        app:layout_constraintStart_toEndOf="@id/member_list_view"
+        app:layout_constraintStart_toEndOf="@id/member_or_data_line"
         app:layout_constraintTop_toBottomOf="@id/details_tab_title_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">

@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/25.
@@ -17,22 +17,22 @@ public class GamePeriodTimeBean {
      * period_name : Qtr
      */
 
-    @SerializedName("period_value")
+    @JSONField(name="period_value")
     private String mPeriodValue;
 
-    @SerializedName("period_status")
+    @JSONField(name="period_status")
     private String mPeriodStatus;
 
-    @SerializedName("game_status")
+    @JSONField(name="game_status")
     private String mGameStatus;
 
-    @SerializedName("game_clock")
+    @JSONField(name="game_clock")
     private String mGameClock;
 
-    @SerializedName("total_periods")
+    @JSONField(name="total_periods")
     private String mTotalPeriods;
 
-    @SerializedName("period_name")
+    @JSONField(name="period_name")
     private String mPeriodName;
 
 

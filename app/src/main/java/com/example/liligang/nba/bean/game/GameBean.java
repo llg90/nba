@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/25.
@@ -30,70 +30,70 @@ public class GameBean {
      * buzzerBeater : 0
      */
 
-    @SerializedName("id")
+    @JSONField(name="id")
     private String mId;
 
-    @SerializedName("game_url")
+    @JSONField(name="game_url")
     private String mGameUrl;
 
-    @SerializedName("season_id")
+    @JSONField(name="season_id")
     private String mSeasonId;
 
-    @SerializedName("date")
+    @JSONField(name="date")
     private String mDate;
 
-    @SerializedName("time")
+    @JSONField(name="time")
     private String mTime;
 
-    @SerializedName("arena")
+    @JSONField(name="arena")
     private String mArena;
 
-    @SerializedName("city")
+    @JSONField(name="city")
     private String mCity;
 
-    @SerializedName("state")
+    @JSONField(name="state")
     private String mState;
 
-    @SerializedName("country")
+    @JSONField(name="country")
     private String mCountry;
 
-    @SerializedName("home_start_date")
+    @JSONField(name="home_start_date")
     private String mHomeStartDate;
 
-    @SerializedName("home_start_time")
+    @JSONField(name="home_start_time")
     private String mHomeStartTime;
 
-    @SerializedName("visitor_start_date")
+    @JSONField(name="visitor_start_date")
     private String mVisitorStartDate;
 
-    @SerializedName("visitor_start_time")
+    @JSONField(name="visitor_start_time")
     private String mVisitorStartTime;
 
-    @SerializedName("previewAvailable")
+    @JSONField(name="previewAvailable")
     private String mPreviewAvailable;
 
-    @SerializedName("recapAvailable")
+    @JSONField(name="recapAvailable")
     private String mRecapAvailable;
 
-    @SerializedName("notebookAvailable")
+    @JSONField(name="notebookAvailable")
     private String mNotebookAvailable;
 
-    @SerializedName("tnt_ot")
+    @JSONField(name="tnt_ot")
     private String mTntOt;
 
-    @SerializedName("buzzerBeater")
+    @JSONField(name="buzzerBeater")
     private String mBuzzerBeater;
 
-    @SerializedName("ticket")
+    @JSONField(name="ticket")
     private GameTicketBean mGameTicket;
 
-    @SerializedName("period_time")
+    @JSONField(name="period_time")
     private GamePeriodTimeBean mGamePeriodTime;
 
-    @SerializedName("visitor")
+    @JSONField(name="visitor")
     private GameVisitorBean mGameVisitor;
 
-    @SerializedName("home")
+    @JSONField(name="home")
     private GameHomeBean mGameHome;
 
     public String getId() {

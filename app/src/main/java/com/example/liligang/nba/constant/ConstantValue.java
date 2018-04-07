@@ -41,6 +41,7 @@ public class ConstantValue {
 
 
     public static class INTENT_KEY {
+        public static final String ID = "id";
         public static final String GAME_STATE = "game_state";
         public static final String HOME_TEAM     = "home_team";
         public static final String VISITOR_TEAM  = "visitor_team";
@@ -48,5 +49,6 @@ public class ConstantValue {
         public static final String VISITOR_SCORE = "visitor_score";
         public static final String GAME_ID = "game_id";
         public static final String GAME_DATE = "game_date";
+        public static final String TEAM_ID = "team_id";
     }
 }

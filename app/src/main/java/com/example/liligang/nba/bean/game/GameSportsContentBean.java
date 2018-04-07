@@ -1,9 +1,7 @@
 package com.example.liligang.nba.bean.game;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.example.liligang.nba.bean.sports.SeasonMetaBean;
-import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 /**
  * Created by liligang on 2018/3/25.
@@ -11,10 +9,10 @@ import java.util.List;
 
 public class GameSportsContentBean {
 
-    @SerializedName("sports_meta")
+    @JSONField(name="sports_meta")
     private SeasonMetaBean mSportsMeta;
 
-    @SerializedName("games")
+    @JSONField(name="games")
     private GamesBean mGames;
 
     public SeasonMetaBean getSportsMeta() {

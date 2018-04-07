@@ -1,6 +1,6 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by liligang on 2018/3/25.
@@ -20,31 +20,31 @@ public class GameVisitorBean {
      * score :
      */
 
-    @SerializedName("id")
+    @JSONField(name="id")
     private String mId;
 
-    @SerializedName("team_key")
+    @JSONField(name="team_key")
     private String mTeamKey;
 
-    @SerializedName("city")
+    @JSONField(name="city")
     private String mCity;
 
-    @SerializedName("abbreviation")
+    @JSONField(name="abbreviation")
     private String mAbbreviation;
 
-    @SerializedName("nickname")
+    @JSONField(name="nickname")
     private String mNickname;
 
-    @SerializedName("url_name")
+    @JSONField(name="url_name")
     private String mUrlName;
 
-    @SerializedName("team_code")
+    @JSONField(name="team_code")
     private String mTeamCode;
 
-    @SerializedName("score")
+    @JSONField(name="score")
     private String mScore; //本场总得分
 
-//    @SerializedName("linescores")
+//    @JSONField(name="linescores")
 //    private GameLinescoresBean mLinescores; //各节得分
 
     public String getId() {

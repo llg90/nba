@@ -203,6 +203,43 @@ public class GameDetailsActivity extends BaseActivity {
     private boolean isRightListEnabled = false;
 
     private void initViewListener() {
+        mDetailsTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        mCurrentMemberDataList.clear();
+                        mCurrentMemberDataList.addAll(mHomeMemberListData);
+                        Utils.setListFromItemMax(mMemberListView);
+                        mMemberListAdapter.notifyDataSetChanged();
+
+                        mCurrentMemberDataListData.clear();
+                        mCurrentMemberDataListData.addAll(mHomeMemberDataListData);
+                        mMemberDataListAdapter.notifyDataSetChanged();
+                        break;
+                    case 1:
+                        mCurrentMemberDataList.clear();
+                        mCurrentMemberDataList.addAll(mVisitorMemberListData);
+                        Utils.setListFromItemMax(mMemberListView);
+                        mMemberListAdapter.notifyDataSetChanged();
+
+                        mCurrentMemberDataListData.clear();
+                        mCurrentMemberDataListData.addAll(mVisitorMemberDataListData);
+                        mMemberDataListAdapter.notifyDataSetChanged();
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         mLinkedHorizontalScrollView.setLinkScrollChangeListener(new LinkedHorizontalScrollView.LinkScrollChangeListener() {
             @Override
             public void onScroll(LinkedHorizontalScrollView view, int l, int t, int oldl, int oldt) {

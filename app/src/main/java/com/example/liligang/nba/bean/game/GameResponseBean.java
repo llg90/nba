@@ -1,9 +1,9 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 public class GameResponseBean {
-    @SerializedName("sports_content")
+    @JSONField(name="sports_content")
     private GameSportsContentBean mGameSportsContentBean;
 
     public GameSportsContentBean getGameSportsContentBean() {

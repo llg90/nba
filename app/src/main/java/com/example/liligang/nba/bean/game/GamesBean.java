@@ -1,11 +1,11 @@
 package com.example.liligang.nba.bean.game;
 
-import com.google.gson.annotations.SerializedName;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.List;
 
 public class GamesBean {
-    @SerializedName("game")
+    @JSONField(name="game")
     private List<GameBean> mGame;
 
     public List<GameBean> getGame() {
