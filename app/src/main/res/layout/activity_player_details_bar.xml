@@ -38,5 +38,186 @@
     </LinearLayout>
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/asistant_text"
+        android:typeface="monospace"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/asistant_bar"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/assists_bar"/>
+
+        <TextView
+            android:id="@+id/asistant_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/rebounds_text"
+        android:typeface="monospace"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/rebounds_bar"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/rebounds_bar"/>
+
+        <TextView
+            android:id="@+id/rebounds_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/steals_text"
+        android:typeface="monospace"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/steals_bar"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/steals_bar"/>
+
+        <TextView
+            android:id="@+id/steals_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/blocks_text"
+        android:typeface="monospace"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/blocks_bar"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/blocks_bar"/>
+
+        <TextView
+            android:id="@+id/blocks_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/turnovers_text"
+        android:typeface="monospace"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/turnovers_bar"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/turnovers_bar"/>
+
+        <TextView
+            android:id="@+id/turnovers_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/minutes_text"
+        android:typeface="monospace"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/minutes_bar"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/steals_bar"/>
+
+        <TextView
+            android:id="@+id/minutes_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
 </LinearLayout>

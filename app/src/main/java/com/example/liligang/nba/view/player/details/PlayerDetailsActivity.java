@@ -1,10 +1,8 @@
 package com.example.liligang.nba.view.player.details;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
@@ -39,6 +37,19 @@ public class PlayerDetailsActivity extends BaseActivity {
     private TextView mReboundsTextView;
 
     private View mPointsBarView;
+    private TextView mPointsValue;
+    private View mAsistantBarView;
+    private TextView mAsistantValue;
+    private View mReboundsBarView;
+    private TextView mReboundsValue;
+    private View mStealsBarView;
+    private TextView mStealsValue;
+    private View mBlocksBarView;
+    private TextView mBlocksValue;
+    private View mTurnoversBarView;
+    private TextView mTurnoversValue;
+    private View mMinutesBarView;
+    private TextView mMinutesValue;
 
     private int mPlayerId;
 
@@ -76,7 +87,22 @@ public class PlayerDetailsActivity extends BaseActivity {
         mAsistantTextView = findViewById(R.id.asistant_text_view);
         mReboundsTextView = findViewById(R.id.rebounds_text_view);
 
-        mPointsBarView = findViewById(R.id.points_bar);
+        mPointsBarView    = findViewById(R.id.points_bar);
+        mPointsValue      = findViewById(R.id.points_value);
+        mAsistantBarView  = findViewById(R.id.asistant_bar);
+        mAsistantValue    = findViewById(R.id.asistant_value);
+        mReboundsBarView  = findViewById(R.id.rebounds_bar);
+        mReboundsValue    = findViewById(R.id.rebounds_value);
+        mStealsBarView    = findViewById(R.id.steals_bar);
+        mStealsValue      = findViewById(R.id.steals_value);
+        mBlocksBarView    = findViewById(R.id.blocks_bar);
+        mBlocksValue      = findViewById(R.id.blocks_value);
+        mTurnoversBarView = findViewById(R.id.turnovers_bar);
+        mTurnoversValue   = findViewById(R.id.turnovers_value);
+        mMinutesBarView   = findViewById(R.id.minutes_bar);
+        mMinutesValue     = findViewById(R.id.minutes_value);
+
+
         Animation animation = new ScaleAnimation(0.0f, 1.0f, 1.0f, 1.0f,
                 Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 1.0f);
         animation.setDuration(2000);
