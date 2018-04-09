@@ -4,6 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="points">#F55443</color>
+    <color name="assists">#FCBD24</color>
+    <color name="rebounds">#59838B</color>
+    <color name="steals">#4D98E4</color>
+    <color name="blocks">#418E50</color>
+    <color name="turnovers">#7B7FEC</color>
+    <color name="minutes">#3ABAA4</color>
+
+
     <color name="white">#FFF</color>
     
     <color name="back_button_normal_color">#FFF</color>

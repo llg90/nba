@@ -8,4 +8,9 @@
     <string name="points_text">Points</string>
     <string name="asistant_text">Asistant</string>
     <string name="rebounds_text">Rebounds</string>
+    <string name="steals_text">Steals</string>
+    <string name="blocks_text">Blocks</string>
+    <string name="turnovers_text">Turnovers</string>
+    <string name="minutes_text">Minutes</string>
+
 </resources>

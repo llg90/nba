@@ -1,8 +1,12 @@
 package com.example.liligang.nba.view.player.details;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,8 +14,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.liligang.nba.R;
 import com.example.liligang.nba.base.BaseActivity;
-import com.example.liligang.nba.bean.player.detail.PlayerInfoResponseBean;
 import com.example.liligang.nba.bean.player.detail.PlayerDetailResultSetsBean;
+import com.example.liligang.nba.bean.player.detail.PlayerInfoResponseBean;
 import com.example.liligang.nba.bean.player.detail.PlayerLogResponseBean;
 import com.example.liligang.nba.constant.ConstantValue;
 import com.example.liligang.nba.constant.Team;
@@ -34,7 +38,10 @@ public class PlayerDetailsActivity extends BaseActivity {
     private TextView mAsistantTextView;
     private TextView mReboundsTextView;
 
+    private View mPointsBarView;
+
     private int mPlayerId;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,15 +67,21 @@ public class PlayerDetailsActivity extends BaseActivity {
         mIconView = findViewById(R.id.icon_view);
         mNameView = findViewById(R.id.name_view);
         mIdentifierView = findViewById(R.id.identifier_view);
+        String url = String.format(Locale.getDefault(), PlayerServerApi.PLAYER_ICON_URL_FORMAT, mPlayerId);
+        Glide.with(this)
+                .applyDefaultRequestOptions(new RequestOptions().circleCrop())
+                .load(url).into(mIconView);
 
         mPointsTextView   = findViewById(R.id.points_text_view);
         mAsistantTextView = findViewById(R.id.asistant_text_view);
         mReboundsTextView = findViewById(R.id.rebounds_text_view);
 
-        String url = String.format(Locale.getDefault(), PlayerServerApi.PLAYER_ICON_URL_FORMAT, mPlayerId);
-        Glide.with(this)
-                .applyDefaultRequestOptions(new RequestOptions().circleCrop())
-                .load(url).into(mIconView);
+        mPointsBarView = findViewById(R.id.points_bar);
+        Animation animation = new ScaleAnimation(0.0f, 1.0f, 1.0f, 1.0f,
+                Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 1.0f);
+        animation.setDuration(2000);
+        mPointsBarView.setAnimation(animation);
+        animation.start();
     }
 
     private void getNetworkData() {

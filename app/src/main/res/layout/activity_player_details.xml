@@ -18,6 +18,8 @@
             android:orientation="vertical">
 
             <include layout="@layout/activity_player_details_info_layout"/>
+
+            <include layout="@layout/activity_player_details_bar"/>
         </LinearLayout>
 
     </ScrollView>
